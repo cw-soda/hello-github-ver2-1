@@ -15,8 +15,8 @@ try{
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
         //名前を渡し続ける。tarouだけが最終的に代入される。
-        session_start();
-        $_SESSION["student_name"] = $row['student_name'];
+//        session_start();
+//        $_SESSION["student_name"] = $row['student_name'];
 
 
         $res .= <<<eod
@@ -24,7 +24,7 @@ try{
         <td>{$row['student_number']}</td>
         <td>{$row['student_name']}</td>
         <td>{$row['birth']}</td>
-        <td><a href = "edit.php">編</a></td>
+        <td><a href = "edit.php?seq={$row['seq']}">編</a></td>
         </tr>
 
 eod;
