@@ -1,0 +1,75 @@
+
+
+
+SELECT
+	*
+FROM
+	students
+WHERE
+	seq = 4
+
+---------------------------------
+
+SELECT
+	*
+FROM
+	students
+LIMIT
+	1, 2
+
+
+---------------------------------
+
+
+freeword = "田"
+対象
+・student_name
+
+SELECT
+	*
+FROM
+	students
+WHERE
+	student_name LIKE '%田%'
+
+
+
+---------------------------------
+
+
+freeword = "da"
+freeword = "田"
+対象
+・student_name
+・email
+
+
+SELECT
+	*
+FROM
+	students
+WHERE
+	email LIKE '%田%' OR
+	student_name LIKE '%田%'
+	
+	
+	
+	CONCAT(student_name,email) LIKE '%田%'
+
+
+
+---------------------------------
+
+
+曽田soda@test.com
+森定morisada@test.com
+田口taguchi@test.com
+中間nakama@test.com
+田中tanaka@test.com
+
+
+
+
+
+
+
